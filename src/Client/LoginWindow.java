@@ -47,6 +47,7 @@ public class LoginWindow extends JFrame{
         
         JPanel p = new JPanel();
         p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
+       
         p.add(loginField);
         p.add(passwordField);
         p.add(loginButton);

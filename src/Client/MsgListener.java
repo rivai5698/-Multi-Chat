@@ -10,5 +10,5 @@ package Client;
  * @author truon
  */
 public interface MsgListener {
-    public void onMsg(String fromLoginString,String msgBody);
+    public void onMsg(String fromLogin,String msgBody);
 }

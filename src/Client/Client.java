@@ -60,12 +60,7 @@ public class Client{
             System.err.println("Connect failed.");
         }else{
             System.out.println("Connect Successful.");
-            if(client.login("guest","guest")){
-                System.out.println("Login succesful");
-                client.msg("admin","Hello");
-            }else{
-                System.out.println("Login failed");
-            }
+            
           //  client.logoff();
         }
         
@@ -84,10 +79,11 @@ public class Client{
         return false;
     }
     public boolean login(String login, String password) throws IOException{
-        String cmd = "login " + login + " " + password + "\n";
+        String cmd ="login "+login +" "+ password+"\n";
         serverOut.write(cmd.getBytes());
+        System.out.println(login+" "+password);
         String res = bufferedIn.readLine();
-        System.out.println("Res Line: " +res);
+        System.out.println("Res Line: " +login+" "+res);
         if("login successfully".equalsIgnoreCase(res)){
             startMsgReader();
             return true;

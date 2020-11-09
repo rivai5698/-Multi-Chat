@@ -33,9 +33,9 @@ public class Server extends Thread{
         try {
             ServerSocket serverSocket = new ServerSocket(serverPort);
             while (true) {                
-                System.out.println("cnt info...");
+                System.out.println("connection info...");
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("acp cnt from: "+ clientSocket);
+                System.out.println("accepted connetion from: "+ clientSocket);
                 ServerWorker worker = new ServerWorker(this,clientSocket);
                 workerList.add(worker);
                 worker.start();

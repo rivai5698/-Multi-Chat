@@ -55,19 +55,19 @@ public class ClientListPane extends JPanel implements ClientState{
     public static void main(String[] args) {
          Client client = new Client("localhost", 69);
          ClientListPane clientListPane = new ClientListPane(client);
-         JFrame frame = new JFrame("Client List Online");
+         JFrame frame = new JFrame("List Client Online");
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          frame.setSize(400,400);
          frame.getContentPane().add(clientListPane,BorderLayout.CENTER);
          frame.setVisible(true);
          
-         if(client.connect()){
+        /* if(client.connect()){
              try {
                  client.login("guest", "guest");
              } catch (IOException ex) {
                  ex.printStackTrace();
              }
-         };
+         };*/
          
     }
 
